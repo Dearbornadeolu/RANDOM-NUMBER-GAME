@@ -25,10 +25,8 @@ div {
     background: url(rainbow-vortex.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 60%;
+    width: 90%;
     min-height: 500px;
-    margin-right: auto;
-    margin-left: auto;
     margin-top: 20%;
     border-radius: 17px;
 }
