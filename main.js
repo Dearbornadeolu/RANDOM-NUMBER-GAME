@@ -5,7 +5,7 @@ const gameResult = document.getElementById("gameresult")
 // check if input is corect
 document.getElementById("check").addEventListener("click", check);
 //generate random number
-let generateRandomNumber;
+const generateRandomNumber = Math.floor(1 + Math.random() * 50);
 //create a count 
 let count = 0
 //let gameOver = false;
@@ -35,13 +35,11 @@ function check() {
 }
 document.getElementById("newgame").addEventListener("click", newGame);
 function newGame() {
-    document.getElementById("newgame").disabled = true
-    let generateRandomNumber = Math.floor(1 + Math.random() * 5)
-    generateRandomNumber = Math.floor(1 + Math.random() * 5)
+    document.getElementById("newgame").disabled = true ;
     count = 0
     gameOver = false;
     document.getElementById("check").disabled = false
 }
 let footerDate = document.getElementById('footer')
 const dateThisGame = new Date();
-footerDate.innerHTML = dateThisGame.getDate()+ ' ' + dateThisGame.getMonth()+ ' ' + dateThisGame.getFullYear()+ ' ' +'<br> COPYRIGHT AND &COPY : ADEYENI DEARBORN. JULY 12 2022';
+footerDate.innerHTML = dateThisGame.getDate() + ' ' + dateThisGame.getMonth() + ' ' + dateThisGame.getFullYear() + ' ' + '<br> COPYRIGHT AND &COPY : ADEYENI DEARBORN. JULY 12 2022';
