@@ -4,8 +4,6 @@ let userFeedback;
 const gameResult = document.getElementById("gameresult")
 // check if input is corect
 document.getElementById("check").addEventListener("click", check);
-//generate random number
-const generateRandomNumber = Math.floor(1 + Math.random() * 50);
 //create a count 
 let count = 0
 //let gameOver = false;
@@ -13,21 +11,21 @@ const maxCount = 5;
 newGame()
 function check() {
     userInput = parseInt(document.getElementById("gamer-input").value);
-    generateRandomNumber = Math.floor(1 + Math.random() * 50)
+    let generateRandomNumber = Math.floor(1 + Math.random() * 10)
     if (userInput < generateRandomNumber) {
-        userFeedback = "too low, try again!"
+        userFeedback = "close call!!!, try again!"
     } else if (userInput === generateRandomNumber) {
-        userFeedback = "congrats"
+        userFeedback = "yay !!! congrats"
         // gameOver = true;
         document.getElementById("check").disabled = true
         document.getElementById("newgame").disabled = false
     } else {
-        userFeedback = "too much ! try again"
+        userFeedback = "woow ! guess so high!! try again"
     }
     //increatment the count. As user clicks, its counts the click
     count++;
     if (count === maxCount && gameOver == false) {
-        userFeedback = "hey, Out of tries. The number was" + ' ' + generateRandomNumber;
+        userFeedback = "Thank you, Out of tries. The last random number was" + ' ' + generateRandomNumber;
         document.getElementById("check").disabled = true
         document.getElementById("newgame").disabled = false
     }
@@ -35,10 +33,10 @@ function check() {
 }
 document.getElementById("newgame").addEventListener("click", newGame);
 function newGame() {
-    document.getElementById("newgame").disabled = true ;
+    document.getElementById("newgame").disabled = true;
     count = 0
     gameOver = false;
-    document.getElementById("check").disabled = false
+    document.getElementById("check").disabled = false;
 }
 let footerDate = document.getElementById('footer')
 const dateThisGame = new Date();
